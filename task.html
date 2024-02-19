@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function D_F(arr) {
+            for(keys in arr){
+            arr[keys] = arr[keys]*2;
+        }
+        return arr;
+}
+
+        function wrapper(callback) {
+            console.log("Wrapper");
+        return arr}
+
+        function D_F2(arr) {
+            for(keys in arr){
+            arr[keys] = arr[keys]%2;
+        }
+        return arr;
+}
+
+
+
+    
+    let arr = [1,2,3,4,5];
+    arr = D_F(arr);
+    console.log(arr);
+    let arr2 = wrapper(arr,D_F(arr));
+    console.log(arr2);
+    let m = arr.map(D_F2);
+    console.log(m);
+
+    let arr3 = arr.filter(item=> item%3);
+    console.log(arr3);
+
+    
+    let color = ["Red", "Green", "Blue"];
+    let color2 = color.filter(item=> item.includes('a'));
+    console.log(color2);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("hello");
+        window.alert("hello");
+        let color = ["Red", "Green", "Blue"];
+        color.push("Purple");
+        console.log(color.length);
+        for(keys in color){
+            console.log(color[keys]);
+        }
+        color.pop();
+        console.log(color)
+        console.log(color.shift());
+        console.log(color.unshift("sky"));
+        console.log(color);
+        let slice2 = color.slice(1,4)
+        console.log("this is "+color.slice(0,1));
+        console.log(slice2);
+        console.log(color.splice(0,0));
+        console.log(color.indexOf("Blue"));
+        console.log(color.lastIndexOf("Blue"));
+        console.log(color.includes("Blue"));
+
+        let info = {
+            name:"Ali",
+            cms: "021-21-0040",
+            age:22,
+            greet: function() {
+            return "Hello, my name is " + this.name + " and I am " + this.age + " years old.";
+  }
+        };
+        console.log(info.name);
+        console.log(info.greet)
+
+        info.job = "Developer";
+        console.log(info.job);
+
+        let employee = Object.create(info);
+        employee.salary = 50000;
+        console.log(employee.salary); // Inherited method call
+
+        let jsonPerson = JSON.stringify(info);
+        console.log(jsonPerson);
+
+        let array_of_obj_key = Object.keys(info);
+        console.log(array_of_obj_key);
+
+        let array_of_obj_value = Object.values(info);
+        console.log(array_of_obj_value);
+
+        let array_of_obj_entry = Object.entries(info);
+        console.log(array_of_obj_entry);
+
+        Object.assign(info,assin);
+        console.log(assin);
+
+        let pn = Object.getOwnPropertyNames(info);
+        console.log(pn);
+
+
+
+    </script>
+</body>
+</html>
